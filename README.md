@@ -2,7 +2,7 @@
 
 Portfolio di una web app per gestire un magazzino ricambi e pianificare gli acquisti. Il progetto collega il lavoro a scaffale alle decisioni di riordino: dalla ricerca di un articolo e dai movimenti di stock fino al fabbisogno residuo e alla preparazione di una richiesta di quotazione.
 
-[Tavolo di lavoro Forecast](#forecast-acquisti) · [Collega digitale e AI](#collega-digitale-e-ai) · [Operatività di magazzino](#operatività-di-magazzino) · [Architettura](#architettura)
+[Tavolo di lavoro Forecast](#forecast-acquisti) · [Collega digitale e AI](#collega-digitale-e-ai) · [Apprendimento acquisti](#apprendimento-acquisti) · [Operatività di magazzino](#operatività-di-magazzino) · [Architettura](#architettura)
 
 Le schermate sono catturate dalle interfacce del software in una demo isolata. Articoli, ubicazioni, fornitori, importi e volumi sono inventati.
 
@@ -42,6 +42,14 @@ Il **Collega digitale** trasforma i fabbisogni residui in una coda di proposte d
 ![Bozza di richiesta di quotazione con due articoli della stessa famiglia e riferimenti alle forniture](assets/schermate/bozza-quotazione.webp)
 
 *La bozza riunisce i due articoli in una sola richiesta e rende esplicita la ragione del raggruppamento. In assenza di uno storico sul codice o di una scelta umana verificata, il fornitore resta da indicare.*
+
+### Apprendimento acquisti
+
+![Schermata demo di Apprendimento acquisti: esito della validazione, righe elaborate e interruttore per i lotti consigliati](assets/schermate/apprendimento-acquisti.webp)
+
+*La scheda mostra l’ultimo ciclo, il modello disponibile e l’opzione per visualizzare i lotti consigliati. Conteggi ed esito nella schermata sono simulati.*
+
+Gli esempi sono divisi per data: quelli più vecchi servono ad addestrare il modello, quelli successivi a scegliere quando fermare l’addestramento e i più recenti a misurare l’errore finale. Il modello dei lotti viene attivato solo se ci sono abbastanza esempi e sul test finale sbaglia meno della regola basata sui lotti storici. Se il nuovo candidato non supera i controlli, resta in uso il modello già validato, se disponibile; altrimenti il Forecast può mostrare i lotti preferiti o storici. Il consiglio resta facoltativo e il calcolo del fabbisogno rimane separato.
 
 ## Operatività di magazzino
 
