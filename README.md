@@ -35,6 +35,10 @@ Il **Collega digitale** trasforma i fabbisogni residui in una coda di proposte d
 
 **Un riordino in pratica.** Per la guarnizione demo, la scorta obiettivo è 78 pezzi. Con 18 a magazzino e 20 già in ordine, ne mancano 40. PyTorch suggerisce un lotto facoltativo di 50 pezzi. Se l'operatore lo sceglie, la quantità finale nella vista acquisti è 70: 20 già ordinati più 50 da acquistare. Il Collega digitale mostra i 50 pezzi nella bozza, insieme alle altre guarnizioni da chiedere allo stesso fornitore.
 
+![Dettaglio della proposta demo del Collega digitale con motivazione del lotto PyTorch, giacenza, ordini aperti e riferimenti del fornitore](assets/schermate/dettaglio-proposta.webp)
+
+*Il dettaglio separa i 40 pezzi di fabbisogno dai 50 del lotto suggerito. L’operatore può controllare la giacenza e gli ordini già aperti, verificare il prezzo storico sulla riga d’ordine e correggere il fornitore prima di usare la bozza.*
+
 ![Bozza di richiesta di quotazione con due articoli della stessa famiglia e riferimenti alle forniture](assets/schermate/bozza-quotazione.webp)
 
 *La bozza riunisce i due articoli in una sola richiesta e rende esplicita la ragione del raggruppamento. In assenza di uno storico sul codice o di una scelta umana verificata, il fornitore resta da indicare.*
